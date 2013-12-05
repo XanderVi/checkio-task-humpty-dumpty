@@ -1,39 +1,97 @@
+<style type="text/css">
+    .story.shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 20px;
+        border: black;
+
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);
+
+    }
+</style>
+<div style="position: relative;">
+
+
+    <div class="story shadow" style="width: 360px; height: 215px; margin-bottom: 0">
+
+    </div>
+    <img src="{{MEDIA}}hd-up.png" width="360px" style="position: absolute; top:20px; left: 20px"/>
+    <img src="{{MEDIA}}hd-down.png" width="162px" style="position: absolute; top:235px; left: 20px"/>
+
+    <div class="story" style="height: 215px; padding-top: 20px; margin-bottom: 0">
+        <p>'I said you LOOKED like an egg, Sir,' Alice gently explained. 'And some
+            eggs are very pretty, you know' she added, hoping to turn her remark
+            into a sort of a compliment.</p>
+
+        <p>'Some people,' said Humpty Dumpty, looking away from her as usual, 'have
+            no more sense than a baby!'</p>
+
+        <p>Alice didn't know what to say to this: it wasn't at all like
+            conversation, she thought, as he never said anything to HER; in fact,
+            his last remark was evidently addressed to a tree--so she stood and
+            softly repeated to herself:--</p>
+    </div>
+    <div class="story shadow" style="width: 162px; height: 201px; margin-top: 0">
+
+    </div>
+    <div class="story" style="padding-top: 20px;">
+        <p style=" margin-left: 300px">
+            Humpty Dumpty sat on a wall:<br>
+            Humpty Dumpty had a great fall.<br>
+            All the King's horses and all the King's men<br>
+            Couldn't put Humpty Dumpty in his place again.<br>
+        </p>
+
+        <p>
+            'That last line is much too long for the poetry,' she added, almost out
+            loud, forgetting that Humpty Dumpty would hear her.
+        </p>
+
+        <p style="float: right">
+            "Through the Looking-Glass." Lewis Carroll
+        </p>
+    </div>
+</div>
+<div style="clear: both;"></div>
 <p>
-    <i>( Describe task in general )</i>
+    After reading this fragment Nicola wants to build his own "Humpty Dumpty".
+    As a basis he choose the spheroid (<a href="http://en.wikipedia.org/wiki/Spheroid">Read about it</a>).
+    We know the height and the width (in inches) for this spheroid.
+    For the work Nikola need to know how much material is required.
 </p>
 
+
 <p>
-    Sum two passed ints
+    You can help with it and create a function to calculate the volume (cubic inches) and the surface area (square inches).
 </p>
 
 <p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <img class="for_info_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="392px"/>
+    <img class="for_editor_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="380px"/>
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Input: </strong> Two arguments. A height and a width, integers.
 </p>
 
+<p>
+    <strong>Output: </strong> The volume and the surface area as a list of floats. The results should be accurate to two decimal.
+</p>
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+checkio(4, 2) == 5
+checkio(6, 1) == 12
     </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    TODO: About ellipsoid.
 </p>
