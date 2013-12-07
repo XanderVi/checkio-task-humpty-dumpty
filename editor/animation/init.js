@@ -62,28 +62,24 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
 
+            var strInput = checkioInput[0] + ", " + checkioInput[1];
+
             $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
-                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
+                $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(explanation));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: checkio(' + strInput + ')');
                 $content.find('.answer').remove();
             }
-            //Dont change the code before it
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var canvas = new SpheroidCanvas();
+            canvas.createCanvas($content.find(".explanation")[0], checkioInput[0], checkioInput[1]);
 
 
             this_e.setAnimationHeight($content.height() + 60);
@@ -106,27 +102,133 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 //            });
 //        });
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+        function SpheroidCanvas(options) {
+            options = options || {};
+            var format = Raphael.format;
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            var colorOrange4 = "#F0801A";
+            var colorOrange3 = "#FA8F00";
+            var colorOrange2 = "#FAA600";
+            var colorOrange1 = "#FABA00";
 
-        var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
+            var colorBlue4 = "#294270";
+            var colorBlue3 = "#006CA9";
+            var colorBlue2 = "#65A1CF";
+            var colorBlue1 = "#8FC7ED";
 
+            var colorGrey4 = "#737370";
+            var colorGrey3 = "#9D9E9E";
+            var colorGrey2 = "#C5C6C6";
+            var colorGrey1 = "#EBEDED";
+
+            var colorWhite = "#FFFFFF";
+
+            var x0 = 10,
+                y0 = 10,
+                field = 320,
+                margin = 40;
+
+            var paper;
+
+            var attrOuter = {"stroke": colorBlue4, "stroke-width": 3, "fill": "r#FFFFFF-#8FC7ED"};
+            var attrNear = {"stroke": colorBlue4, "stroke-width": 2};
+            var attrAxis = {"stroke": colorBlue4, "stroke-width": 1, "stroke-dasharray": "- "};
+            var attrFar = {"stroke": colorBlue4, "stroke-width": 1, "stroke-dasharray": "-"};
+            var attrMeasureLine = {"stroke": colorGrey4, "stroke-width": 2};
+            var attrData = {"stroke": colorBlue4, "font-size": 20, "font-family": "Verdana"};
+
+            var outer, nearVert, nearHoriz, farVert, farHoriz, axisVert, axisHoriz;
+            var measureVtop, measureVlow, measureVcon, measureHleft, measureHright, measureHcon;
+            var measureV, measureH;
+
+            this.createCanvas = function (dom, height, width) {
+                var unit = Math.min(field / 4, field / Math.max(height, width));
+                var cx = x0 + field / 2,
+                    cy = y0 + field / 2;
+                paper = Raphael(dom, x0 * 2 + field + margin, x0 * 2 + field + margin);
+
+                measureVtop = paper.path(format("M{0},{1}H{2}",
+                    cx, cy - unit * height / 2, 2.5 * x0 + field
+                )).attr(attrMeasureLine);
+                measureVlow = paper.path(format("M{0},{1}H{2}",
+                    cx, cy + unit * height / 2, 2.5 * x0 + field
+                )).attr(attrMeasureLine);
+                measureVcon = paper.path(format("M{0},{1}V{2}",
+                    2 * x0 + field,
+                    cy - unit * height / 2,
+                    cy + unit * height / 2
+                )).attr(attrMeasureLine).attr({"arrow-end": "classical", "arrow-start": "classical"});
+                measureV = paper.text(x0 * 2 + field + margin / 2, cy, height).attr(attrData);
+
+                measureHleft = paper.path(format("M{0},{1}V{2}",
+                    cx - unit * width / 2, cy, 4.5 * y0 + field
+                )).attr(attrMeasureLine);
+                measureHright = paper.path(format("M{0},{1}V{2}",
+                    cx + unit * width / 2, cy, 4.5 * y0 + field
+                )).attr(attrMeasureLine);
+                measureHcon = paper.path(format("M{0},{1}H{2}",
+                    cx - unit * width / 2,
+                    4 * y0 + field,
+                    cx + unit * width / 2
+                )).attr(attrMeasureLine).attr({"arrow-end": "classical", "arrow-start": "classical"});
+                measureH = paper.text(cx, y0 * 2.5 + field, width).attr(attrData);
+
+                outer = paper.ellipse(cx, cy, unit * width / 2, unit * height / 2).attr(attrOuter);
+
+                nearVert = paper.path(
+                    format("M{0},{1}A{2},{3},0,0,0,{0},{4}",
+                        cx,
+                        cy - unit * height / 2,
+                        unit * width / 8,
+                        unit * height / 2,
+                        cy + unit * height / 2
+                    )).attr(attrNear);
+
+                farVert = paper.path(
+                    format("M{0},{1}A{2},{3},0,0,1,{0},{4}",
+                        cx,
+                        cy - unit * height / 2,
+                        unit * width / 8,
+                        unit * height / 2,
+                        cy + unit * height / 2
+                    )).attr(attrFar);
+
+                axisVert = paper.path(
+                    format("M{0},{1}L{0},{2}",
+                        cx,
+                        cy - unit * height / 2,
+                        cy + unit * height / 2
+                    )).attr(attrAxis);
+
+                nearHoriz = paper.path(
+                    format("M{0},{1}A{2},{3},0,0,0,{4},{1}",
+                        cx - unit * width / 2,
+                        cy,
+                        unit * width / 2,
+                        unit * width / 8,
+                        cx + unit * width / 2
+                    )).attr(attrNear);
+
+                farHoriz = paper.path(
+                    format("M{0},{1}A{2},{3},0,0,1,{4},{1}",
+                        cx - unit * width / 2,
+                        cy,
+                        unit * width / 2,
+                        unit * width / 8,
+                        cx + unit * width / 2
+                    )).attr(attrFar);
+
+                axisHoriz = paper.path(
+                    format("M{0},{1}L{2},{1}",
+                        cx - unit * width / 2,
+                        cy,
+                        cx + unit * width / 2
+                    )).attr(attrAxis);
+
+
+            }
+        }
 
     }
 );

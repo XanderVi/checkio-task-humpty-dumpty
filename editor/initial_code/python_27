@@ -1,11 +1,8 @@
-def checkio(a, b):
-    """
-        sums two passed arguments
-    """
-    return None
+def checkio(height, width):
+    return [1, 1]
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    assert checkio(3, 2) == 5
-    assert checkio(5, 7) == 12
-    print('Done')
+    assert checkio(4, 2) == [8.38, 20.49], "Prolate spheroid"
+    assert checkio(2, 2) == [4.19, 12.57], "Sphere"
+    assert checkio(2, 4) == [16.76, 34.57], "Oblate spheroid"
