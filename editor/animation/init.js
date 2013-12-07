@@ -80,6 +80,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             var canvas = new SpheroidCanvas();
             canvas.createCanvas($content.find(".explanation")[0], checkioInput[0], checkioInput[1]);
+//            canvas.animateCanvas();
 
 
             this_e.setAnimationHeight($content.height() + 60);
@@ -132,7 +133,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var paper;
 
             var attrOuter = {"stroke": colorBlue4, "stroke-width": 3, "fill": "r#FFFFFF-#8FC7ED"};
-            var attrNear = {"stroke": colorBlue4, "stroke-width": 2};
+            var attrNear = {"stroke": colorBlue4, "stroke-width": 2, "stroke-dasharray": ""};
             var attrAxis = {"stroke": colorBlue4, "stroke-width": 1, "stroke-dasharray": "- "};
             var attrFar = {"stroke": colorBlue4, "stroke-width": 1, "stroke-dasharray": "-"};
             var attrMeasureLine = {"stroke": colorGrey4, "stroke-width": 2};
@@ -142,10 +143,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             var measureVtop, measureVlow, measureVcon, measureHleft, measureHright, measureHcon;
             var measureV, measureH;
 
+            var unit, cx, cy;
+
             this.createCanvas = function (dom, height, width) {
-                var unit = Math.min(field / 4, field / Math.max(height, width));
-                var cx = x0 + field / 2,
-                    cy = y0 + field / 2;
+                this.width = width;
+                this.height = height;
+                unit = Math.min(field / 4, field / Math.max(height, width));
+                cx = x0 + field / 2;
+                cy = y0 + field / 2;
                 paper = Raphael(dom, x0 * 2 + field + margin, x0 * 2 + field + margin);
 
                 measureVtop = paper.path(format("M{0},{1}H{2}",
@@ -206,7 +211,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         cx - unit * width / 2,
                         cy,
                         unit * width / 2,
-                        unit * width / 8,
+                        unit * width / 10,
                         cx + unit * width / 2
                     )).attr(attrNear);
 
@@ -215,7 +220,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         cx - unit * width / 2,
                         cy,
                         unit * width / 2,
-                        unit * width / 8,
+                        unit * width / 10,
                         cx + unit * width / 2
                     )).attr(attrFar);
 
@@ -225,6 +230,62 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                         cy,
                         cx + unit * width / 2
                     )).attr(attrAxis);
+
+
+            };
+
+            this.animateCanvas = function () {
+                var rx = this.width * unit / 8;
+                var s = 1;
+                var t = 0;
+                var ry = unit * this.height / 2;
+                var maxRx = this.width * unit / 2;
+                var stepS = 0.1;
+                var stepT = 0.5;
+                var sweep = 0;
+                var top = cy - unit * this.height / 2;
+                var bottom = cy + unit * this.height / 2;
+
+                (function rotateVert() {
+                    if (s > 4) {
+                        stepS = -0.1;
+                        stepT = -0.5;
+                        nearVert.attr(attrFar);
+                        farVert.attr(attrNear);
+
+                    }
+                    if (s < 0) {
+                        stepS = 0.1;
+                        stepT = 0.5;
+                        nearVert.attr(attrNear);
+                        farVert.attr(attrFar);
+                    }
+                    s += stepS;
+                    t += stepT;
+
+                    nearVert.animate({"transform": "s" + s + ",1," + cx + "," + cy}, 50);
+                    farVert.animate({"transform": "s" + s + ",1," + cx + "," + cy}, 50, rotateVert);
+//                    nearVert.animate({"path":
+//                        format("M{0},{1}A{2},{3},0,0,{5},{0},{4}",
+//                            cx,
+//                            top,
+//                            rx,
+//                            ry,
+//                            bottom,
+//                            sweep
+//                        )}, 50
+//                    );
+//                    farVert.animate({"path":
+//                        format("M{0},{1}A{2},{3},0,0,{5},{0},{4}",
+//                            cx,
+//                            top,
+//                            rx,
+//                            ry,
+//                            bottom,
+//                            1 - sweep
+//                        )}, 50, rotateVert
+//                    );
+                })();
 
 
             }
