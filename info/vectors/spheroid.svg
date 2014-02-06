@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200" height="900" viewBox="0, 0, 1200, 900">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="780" height="585" viewBox="0, 0, 1200, 900">
   <g id="Background">
     <rect x="0" y="0" width="1200" height="900" fill="#000000" fill-opacity="0"/>
   </g>
+  <g id="Background"/>
   <g id="Layer 1">
     <path d="M660.5,120.5 L860.5,120.5" fill-opacity="0" stroke="#737370" stroke-width="4"/>
     <path d="M660.5,360.5 L860.5,360.5" fill-opacity="0" stroke="#737370" stroke-width="4"/>
@@ -61,73 +62,121 @@
     <path d="M180.5,600.5 L180.5,120.5" fill-opacity="0" stroke="#294270" stroke-width="2" stroke-dasharray="12,10"/>
     <g>
       <path d="M840.5,136.9 L840.5,344.1" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M845.3,136.9 L840.5,124.1 L835.7,136.9 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M835.7,344.1 L840.5,356.9 L845.3,344.1 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M845.3,136.9 L840.5,124.1 L835.7,136.9 z" fill="#737370"/>
+        <path d="M845.3,136.9 L840.5,124.1 L835.7,136.9 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M835.7,344.1 L840.5,356.9 L845.3,344.1 z" fill="#737370"/>
+        <path d="M835.7,344.1 L840.5,356.9 L845.3,344.1 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
     <g>
       <path d="M764.1,420.5 L556.9,420.5" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M764.1,425.3 L776.9,420.5 L764.1,415.7 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M556.9,415.7 L544.1,420.5 L556.9,425.3 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M764.1,425.3 L776.9,420.5 L764.1,415.7 z" fill="#737370"/>
+        <path d="M764.1,425.3 L776.9,420.5 L764.1,415.7 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M556.9,415.7 L544.1,420.5 L556.9,425.3 z" fill="#737370"/>
+        <path d="M556.9,415.7 L544.1,420.5 L556.9,425.3 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
     <g>
       <path d="M360.5,136.9 L360.5,584.1" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M365.3,136.9 L360.5,124.1 L355.7,136.9 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M355.7,584.1 L360.5,596.9 L365.3,584.1 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M365.3,136.9 L360.5,124.1 L355.7,136.9 z" fill="#737370"/>
+        <path d="M365.3,136.9 L360.5,124.1 L355.7,136.9 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M355.7,584.1 L360.5,596.9 L365.3,584.1 z" fill="#737370"/>
+        <path d="M355.7,584.1 L360.5,596.9 L365.3,584.1 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
     <g>
       <path d="M284.1,660.5 L76.9,660.5" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M284.1,665.3 L296.9,660.5 L284.1,655.7 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M76.9,655.7 L64.1,660.5 L76.9,665.3 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M284.1,665.3 L296.9,660.5 L284.1,655.7 z" fill="#737370"/>
+        <path d="M284.1,665.3 L296.9,660.5 L284.1,655.7 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M76.9,655.7 L64.1,660.5 L76.9,665.3 z" fill="#737370"/>
+        <path d="M76.9,655.7 L64.1,660.5 L76.9,665.3 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
     <g>
       <path d="M853.3,840.5 L406.1,840.5" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M853.3,845.3 L866.1,840.5 L853.3,835.7 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M406.1,835.7 L393.3,840.5 L406.1,845.3 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M853.3,845.3 L866.1,840.5 L853.3,835.7 z" fill="#737370"/>
+        <path d="M853.3,845.3 L866.1,840.5 L853.3,835.7 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M406.1,835.7 L393.3,840.5 L406.1,845.3 z" fill="#737370"/>
+        <path d="M406.1,835.7 L393.3,840.5 L406.1,845.3 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
     <g>
       <path d="M929.7,556.9 L929.7,764.1" fill-opacity="0" stroke="#737370" stroke-width="4"/>
-      <path d="M934.5,556.9 L929.7,544.1 L924.9,556.9 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
-      <path d="M924.9,764.1 L929.7,776.9 L934.5,764.1 z" fill="#737370" fill-opacity="1" stroke="#737370" stroke-width="4" stroke-opacity="1"/>
+      <g>
+        <path d="M934.5,556.9 L929.7,544.1 L924.9,556.9 z" fill="#737370"/>
+        <path d="M934.5,556.9 L929.7,544.1 L924.9,556.9 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
+      <g>
+        <path d="M924.9,764.1 L929.7,776.9 L934.5,764.1 z" fill="#737370"/>
+        <path d="M924.9,764.1 L929.7,776.9 L934.5,764.1 z" fill-opacity="0" stroke="#737370" stroke-width="4"/>
+      </g>
     </g>
-    <text transform="matrix(1, 0, 0, 1, 193.6, 89.236)">
-      <tspan x="-153.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">prolate spheroid</tspan>
+    <text transform="matrix(1, 0, 0, 1, 194.1, 89.236)">
+      <tspan x="-154.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">prolate spheroid</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 669.6, 89.236)">
-      <tspan x="-57.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">sphere</tspan>
+    <text transform="matrix(1, 0, 0, 1, 670.1, 89.236)">
+      <tspan x="-58.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">sphere</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 653.2, 508.5)">
-      <tspan x="-144" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">oblate spheroid</tspan>
+    <text transform="matrix(1, 0, 0, 1, 653.7, 508.5)">
+      <tspan x="-144.5" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">oblate spheroid</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 379.6, 360)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">4</tspan>
+    <text transform="matrix(1, 0, 0, 1, 380.1, 360)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">4</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 180, 641.5)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
+    <text transform="matrix(1, 0, 0, 1, 180.5, 641.5)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 862.365, 240)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
+    <text transform="matrix(1, 0, 0, 1, 862.865, 240)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 660, 401.5)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
+    <text transform="matrix(1, 0, 0, 1, 660.5, 401.5)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 951.565, 660)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
+    <text transform="matrix(1, 0, 0, 1, 952.065, 660)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">2</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 629.2, 818.5)">
-      <tspan x="-9.6" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">4</tspan>
+    <text transform="matrix(1, 0, 0, 1, 629.7, 818.5)">
+      <tspan x="-10.1" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">4</tspan>
     </text>
-    <text transform="matrix(1, 0, 0, 1, 180, 743.5)">
-      <tspan x="-86.4" y="-8.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 8.38</tspan>
-      <tspan x="-86.4" y="27.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 20.49</tspan>
-    </text>
-    <text transform="matrix(1, 0, 0, 1, 1016.4, 246.5)">
-      <tspan x="-86.4" y="-8.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 4.19</tspan>
-      <tspan x="-86.4" y="27.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 12.57</tspan>
-    </text>
-    <text transform="matrix(1, 0, 0, 1, 1096.4, 659.5)">
-      <tspan x="-86.4" y="-8.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 16.76</tspan>
-      <tspan x="-86.4" y="27.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 34.57</tspan>
-    </text>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 170.9, 725.5)">
+        <tspan x="-77.3" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 8.38</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 180.5, 761.5)">
+        <tspan x="-86.9" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 20.49</tspan>
+      </text>
+    </g>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 1007.3, 228.5)">
+        <tspan x="-77.3" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 4.19</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 1016.9, 264.5)">
+        <tspan x="-86.9" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 12.57</tspan>
+      </text>
+    </g>
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 1096.9, 641.5)">
+        <tspan x="-86.9" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">V = 16.76</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 1096.9, 677.5)">
+        <tspan x="-86.9" y="9.5" font-family="PTMono-Bold" font-size="32" fill="#294270">S = 34.69</tspan>
+      </text>
+    </g>
   </g>
   <defs>
     <radialGradient id="Gradient_1" gradientUnits="userSpaceOnUse" cx="660.5" cy="240.5" r="120">
