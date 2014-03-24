@@ -41,8 +41,10 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
             var checkioInput = data.in;
 
+            var strInput = checkioInput[0] + ", " + checkioInput[1];
+
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -62,7 +64,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             //if you need additional info from tests (if exists)
             var explanation = data.ext["explanation"];
 
-            var strInput = checkioInput[0] + ", " + checkioInput[1];
 
             $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
 
@@ -78,10 +79,11 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.answer').remove();
             }
 
-            var canvas = new SpheroidCanvas();
-            canvas.createCanvas($content.find(".explanation")[0], checkioInput[0], checkioInput[1]);
+            if (explanation) {
+                var canvas = new SpheroidCanvas();
+                canvas.createCanvas($content.find(".explanation")[0], checkioInput[0], checkioInput[1]);
 //            canvas.animateCanvas();
-
+            }
 
             this_e.setAnimationHeight($content.height() + 60);
 
