@@ -1,0 +1,120 @@
+﻿<style type="text/css">
+    .story.shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+
+
+    }
+</style>
+<div class="for_info_only" style="position: relative; margin-bottom: 0px">
+
+
+    <div class="story shadow" style="width: 360px; height: 215px; margin-bottom: 0">
+
+    </div>
+    <img src="{{MEDIA}}hd-sepia.png" width="360px" style="position: absolute; top:20px; left: 20px"/>
+
+    <div class="story" style="height: 215px; padding-top: 20px; margin-bottom: 0">
+        <p style="margin-top: 10px">「たまごそっくりに見えるって申し上げたんです」アリスは穏やかに説明した。
+            「それからご存知の通りたまごは非常に美しいのです」
+            彼女は彼がこっちを向いてくれるをことを期待してお世辞を付け加えた。</p>
+
+        <p>「一部の人々は」ハンプティ・ダンプティは相変わらず彼女から目をそらしながら言った。
+            「赤ん坊以下の分別しかない!」</p>
+
+        <p>アリスは何と返していいか分からなかった:
+            これでは全く会話になっておらず、彼はなにも言ってないのと同じだと思った;
+            実際に彼の最後の言葉は明らかに木に向けてのものであった。
+            彼女は立ち上がってゆっくり独り言で繰り返した:</p>
+    </div>
+    <div class="story shadow" style="width: 162px; height: 170px; margin-top: 0">
+
+    </div>
+    <div class="story" style="padding-top: 20px;">
+        <p style=" margin-left: 300px">
+            ハンプティ・ダンプティが塀の上<br>
+            ハンプティ・ダンプティが落っこちた<br>
+            王の馬と家来が総がかり<br>
+            けれど元には戻せなかった<br>
+        </p>
+
+        <p style="margin-left: 260px">
+            「最後の行はこの詩には長すぎるわ」
+            ハンプティ・ダンプティが聞いているのも忘れて大声を上げてしまった。
+        </p>
+
+        <p style="float: right">
+            「鏡の国のアリス」ルイス・キャロル
+        </p>
+    </div>
+</div>
+<div style="clear: both;"></div>
+<p>
+    ニコラはこの一説を読み終えて自分だけの「ハンプティ・ダンプティ」を作りたくなった。
+    彼は回転楕円を元にすることにした。 (<a href="http://en.wikipedia.org/wiki/Spheroid">詳細はWikipediaを参照</a>).
+    私たちはこの回転楕円の高さと幅(単位:インチ)を知っている。ニコラはこの作業においてどれだけの原料が必要か知る必要があった。
+</p>
+
+
+<p>
+    あなたは体積(立法インチ)と表面積(平方インチ)を計算する関数を作って彼を手伝うことができる。
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="600px"/>
+    <img class="for_editor_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="380px"/>
+</p>
+
+<p>
+    <strong>ヒント:</strong><em>sin</em><sup>-1</sup><em>x</em>に気を付けよう -- これは <em>arcsin</em>である。
+</p>
+<p>
+    <strong>入力: </strong> 2引数。 高さと幅。(integer型)
+</p>
+
+<p>
+    <strong>出力: </strong> 体積と表面積。(float型のリスト) 精度は小数点第2位とする。.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">
+checkio(4, 2) == [8.38, 21.48]
+checkio(2, 2) == [4.19, 12.57]
+checkio(2, 4) == [16.76, 34.69]
+    </pre>
+</div>
+
+<div class="for_info_only">
+    <strong>どのように使われるか: </strong>
+
+    <p>
+        これは単純な数学の問題である。
+        しかし円形楕円という素晴らしい形を紹介したかった。(もしあなたがまだ聞いたことがなければだが)</p>
+
+    <p>
+
+        様々なスポーツ(ラグビーやオーストラリアンフットボールなど)のボールは長球(上下に長い楕円)である
+        アメリカンフットボールではより尖った長球を使う。
+        太陽系のいくつかの衛星は長球に近い形をしている。
+        土星の衛星のミマス、エンケラドゥス、テティス、天王星の衛星ミランダなどがそれである。
+    </p>
+
+    <p>
+        地球の本当の形はごく僅か上下に短い扁球と呼ばれるものである。
+        北極と南極間の最短の直径はおよそ 12,714km である。
+        赤道付近の最長の直系はおよそ 12,756km であり
+        これは地球が完全な球でないことを意味する。
+    </p>
+</div>
+
+<p>
+    <strong>事前条件:</strong>
+    0 &lt; width &lt; 100<br>
+    0 &lt; height &lt; 100<br>
+</p>
