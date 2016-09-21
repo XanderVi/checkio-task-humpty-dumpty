@@ -1,0 +1,117 @@
+<style type="text/css">
+    .story.shadow {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+    }
+</style>
+<div class="for_info_only" style="position: relative; margin-bottom: 0px">
+
+
+    <div class="story shadow" style="width: 360px; height: 215px; margin-bottom: 0">
+
+    </div>
+    <img src="{{MEDIA}}hd-sepia.png" width="360px" style="position: absolute; top:20px; left: 20px"/>
+
+    <div class="story" style="height: 215px; padding-top: 20px; margin-bottom: 0">
+        <p style="margin-top: 10px">„Ich sagte nur, daß Sie einem Ei gleichen, mein Herr," erklärte Alice sanft, 
+        „und manche Eier sind sehr hübsch." fügte sie hinzu. Sie hoffte dadurch ihre Bemerkung in eine 
+        Art Kompliment zu verwandeln.</p>
+
+        <p>„Manche Leute," sagte Plumpsti Bumsti, und 
+            schaute wie immer von ihr weg, „haben nicht mehr 
+            Verstand wie ein Säugling." </p>
+
+        <p>Alice wußte nicht, was sie dazu sagen sollte; sie fühlte sich gar nicht getroffen, denn er sagte niemals 
+          etwas zu ihr; seine letzte Bemerkung war sogar offenbar an einen Baum gerichtet. So stand sie und murmelte 
+          leise den Kinderreim vor sich hin:</p>
+    </div>
+    <div class="story shadow" style="width: 162px; height: 170px; margin-top: 0">
+
+    </div>
+    <div class="story" style="padding-top: 20px;">
+        <p style=" margin-left: 300px">
+            „Plumpsti Bumsti saß auf einem Wall, <br>
+            Plumpsti Bumsti tat einen großen Fall, <br>
+            Alle Mannen des Königs und alle Reiter des Lands <br>
+            Machen Plumpsti Bumsti nimmer wieder ganz." <br>
+        </p>
+
+        <p style="margin-left: 260px">
+          „Schwatz nicht so mit dir selber," sagte Plumpsti Bumsti und schaute sie zum erstenmal an. „Sag mir 
+          lieber deinen Namen und Beruf."
+        </p>
+
+        <p style="float: right">
+            "Alice im Spiegelland" ("Through the Looking-Glass") Lewis Carroll, Übersetzung von Helene Scheu-Riesz, 1923</p>
+    </div>
+</div>
+<div style="clear: both;"></div>
+<p>
+    Nach dem Lesen dieses Fragmentes will Nicola seinen eigenen "Plumpsti Bumsti" bauen ("Humpty Dumpty" im englischen Original) .
+    Als Basis wählt er ein Rotationsellipsoid (<a href="https://de.wikipedia.org/wiki/Rotationsellipsoid">lies mehr darüber auf Wikipedia</a>).
+    Wir kennen die Höhe und die Breite (in Zoll) dieses Rotationsellipsoids. Für die bevorstehende Arbeit sollte Nikola wissen, wie viel Material
+    er benötigt.
+</p>
+
+<p>
+    Du kannst ihm helfen und eine Funktion programmieren, welche das Volumen (in Kubikzoll) und die Oberfläche (in Quadratzoll) berechnet.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="600px"/>
+    <img class="for_editor_only" title="spheroid" src="{{MEDIA}}spheroid.png" alt="spheroid" width="380px"/>
+</p>
+
+<p>
+    <strong>Tips:</strong> Pass auf mit <em>sin</em><sup>-1</sup><em>x</em> -- das ist der <em>Arkussinus</em>.
+</p>
+<p>
+    <strong>Eingabe: </strong> Zwei Argumente. Eine Höhe und Weite als Ganzzahlen.
+</p>
+
+<p>
+    <strong>Ausgabe: </strong> Das Volumen und die Fläche als Liste von Gleitpunktzahlen. Die Ergebnisse müssen auf zwei Nachkommastellen genau sein.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+    <pre class="brush: python">
+checkio(4, 2) == [8.38, 21.48]
+checkio(2, 2) == [4.19, 12.57]
+checkio(2, 4) == [16.76, 34.69]
+    </pre>
+</div>
+
+<div class="for_info_only">
+    <strong>Wozu das gut ist: </strong>
+
+    <p>
+        Das ist zwar nur eine simple Mathematikaufgabe, aber wir möchten Dich dabei einer 
+        famosen Form vorstellen -- dem Rotationsellipsoid, oder auch Sphäroid. (Falls Du noch nie davon gehört hast)
+        </p>
+
+    <p>
+        Das verlängerte Rotationsellipsoid hat die Form eines Balles verschiedener Sportarten,
+        wie Rugby oder Australian Football. Jene des American Football ist ein verlängertes Sphäroid mit spitzen Enden. 
+        Etliche Monde des Sonnensystems entsprechen ungefähr einem verlängerten Rotationsellipsoid, genau genommen sind sie aber ungleichseitig.
+        Beispiele sind Mimas, Enceladus und Tethys, welche den Saturn umkreisen, und Miranda im Orbit des Uranus.
+    </p>
+
+    <p>
+        Die echte Form der Erde wird abgeplattetes Rotationsellipsoid genannt, obwohl ihre Pole nur ganz leicht abgeplattet sind. 
+        Der Durchmesser vom Nord- zum Südpol (der kürzeste Durchmesser) ist ungefähr 12,714 km.
+        Der Äquatordurchmesser (der längste Durchmesser) ist ungefähr 12,756 km.
+        Das ist kein großer Unterschied, aber er zeigt, die Form der Erde entspricht nicht ganz einer Kugel.
+    </p>
+</div>
+
+<p>
+    <strong>Bedingung:</strong>
+    0 &lt; width &lt; 100<br>
+    0 &lt; height &lt; 100<br>
+</p>
