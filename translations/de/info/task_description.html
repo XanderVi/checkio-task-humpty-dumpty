@@ -78,11 +78,19 @@
     <p>
         <strong>Beispiel:</strong>
     </p>
-    <pre class="brush: python">
-checkio(4, 2) == [8.38, 21.48]
-checkio(2, 2) == [4.19, 12.57]
-checkio(2, 4) == [16.76, 34.69]
-    </pre>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+spheroid(4, 2) == [8.38, 21.48]
+spheroid(2, 2) == [4.19, 12.57]
+spheroid(2, 4) == [16.76, 34.69]
+</pre>
+{% else %}
+<pre class="brush: python">
+spheroid(4, 2) == [8.38, 21.48]
+spheroid(2, 2) == [4.19, 12.57]
+spheroid(2, 4) == [16.76, 34.69]
+</pre>
+{% endif %}
 </div>
 
 <div class="for_info_only">
